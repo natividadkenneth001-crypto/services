@@ -48,9 +48,7 @@
             background-attachment: fixed;
         }
 
-        /* =========================================
-           NAVBAR WITH YOUR INFO
-           ========================================= */
+        /* NAVBAR */
         .navbar {
             position: sticky;
             top: 0;
@@ -80,12 +78,7 @@
         }
 
         .logo-title i { color: var(--primary); }
-        
-        .logo-title span {
-            color: var(--text-muted);
-            font-weight: 500;
-            font-size: 1rem;
-        }
+        .logo-title span { color: var(--text-muted); font-weight: 500; font-size: 1rem; }
 
         .logo-sub {
             font-size: 0.7rem;
@@ -112,18 +105,12 @@
             transition: color 0.3s;
         }
 
-        .contact-link:hover {
-            color: var(--primary);
-        }
-
-        .contact-link i {
-            color: var(--primary);
-            font-size: 1rem;
-        }
+        .contact-link:hover { color: var(--primary); }
+        .contact-link i { color: var(--primary); font-size: 1rem; }
 
         /* Hero Section */
         .hero-section {
-            padding: 4rem 5% 5rem;
+            padding: 5rem 5% 5rem;
             position: relative;
         }
 
@@ -136,11 +123,23 @@
             align-items: center;
         }
 
+        .hook-badge {
+            display: inline-block;
+            background: rgba(236, 72, 153, 0.15);
+            color: #f472b6;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(236, 72, 153, 0.3);
+        }
+
         .hero-text h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 800;
             line-height: 1.1;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             letter-spacing: -1px;
             color: var(--text-light);
         }
@@ -169,7 +168,7 @@
         }
 
         .hero-checks span { display: flex; align-items: center; gap: 0.4rem; }
-        .hero-checks i { color: var(--primary); }
+        .hero-checks i { color: var(--green); }
 
         .btn-blue {
             background: var(--primary);
@@ -299,16 +298,16 @@
             margin: 0 auto;
         }
 
-        .section-title { margin-bottom: 2rem; }
+        .section-title { margin-bottom: 2rem; text-align: center; }
 
         .section-title h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 800;
             color: var(--text-light);
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.5rem;
         }
         
-        .section-title p { color: var(--text-muted); font-size: 0.95rem; }
+        .section-title p { color: var(--text-muted); font-size: 1rem; }
 
         .package-layout {
             display: grid;
@@ -332,6 +331,7 @@
             background: rgba(17, 17, 17, 0.8);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-dark);
+            position: relative;
         }
 
         .price-card:hover {
@@ -342,11 +342,27 @@
 
         .price-card.card-business {
             background: linear-gradient(180deg, rgba(37, 99, 235, 0.15) 0%, rgba(17, 17, 17, 0.9) 100%);
-            border-color: rgba(59, 130, 246, 0.3);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: scale(1.02);
         }
         .price-card.card-business:hover {
-            border-color: rgba(59, 130, 246, 0.6);
+            border-color: rgba(59, 130, 246, 0.8);
             box-shadow: 0 15px 30px rgba(37, 99, 235, 0.2);
+            transform: scale(1.02) translateY(-8px);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 0.2rem 1rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
         .price-card.card-premium {
@@ -406,7 +422,7 @@
 
         .feat-list {
             list-style: none;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             flex-grow: 1;
         }
 
@@ -422,6 +438,16 @@
         .card-starter .feat-list li i { color: var(--cyan); font-size: 0.75rem; margin-top: 4px; }
         .card-business .feat-list li i { color: var(--primary); font-size: 0.75rem; margin-top: 4px; }
         .card-premium .feat-list li i { color: var(--purple); font-size: 0.75rem; margin-top: 4px; }
+
+        .retainer-note {
+            font-size: 0.7rem;
+            color: #fbbf24;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
 
         .btn-card {
             display: block;
@@ -456,6 +482,7 @@
         }
         .btn-card-purple:hover { background: #7c3aed; box-shadow: 0 0 15px rgba(139, 92, 246, 0.4); }
 
+        /* Sidebar */
         .sidebar {
             background: rgba(17, 17, 17, 0.8);
             backdrop-filter: blur(10px);
@@ -496,17 +523,70 @@
             line-height: 1.4;
         }
 
+        /* OUR PROCESS SECTION (Bago) */
+        .process-section {
+            padding: 5rem 5%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin: 0 auto 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-step h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .process-step p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* FULL WIDTH FOOTER BANNER */
         .footer-banner {
             background: rgba(5, 5, 5, 0.9);
             backdrop-filter: blur(10px);
             color: white;
-            padding: 3rem 8%; 
+            padding: 4rem 8%; 
             display: flex;
             justify-content: space-between; 
             align-items: center;
             width: 100%;
             gap: 2rem;
             border-top: 1px solid var(--border-dark);
+            background-image: radial-gradient(circle at right, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
         }
 
         .cta-left {
@@ -517,42 +597,44 @@
         }
 
         .cta-left i {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--primary);
         }
 
         .cta-text h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 0.2rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--text-light);
         }
 
         .cta-text p {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--text-muted);
         }
 
         .btn-cta {
-            border: 1px solid #3f3f46;
+            background: var(--primary);
+            border: 1px solid var(--primary);
             color: white;
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 1rem;
+            font-weight: 600;
             display: flex;
             align-items: center;
             gap: 0.5rem;
             transition: all 0.3s;
             white-space: nowrap;
             margin-left: auto; 
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
         }
 
         .btn-cta:hover {
-            background: rgba(255,255,255,0.05);
-            border-color: var(--primary);
-            color: var(--primary);
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
         }
 
         /* Responsive */
@@ -561,6 +643,7 @@
             .hero-text p { margin: 0 auto 2rem; }
             .hero-checks { justify-content: center; }
             .package-layout { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
             .navbar { flex-direction: column; gap: 1rem; padding: 1rem; text-align: center; }
             .logo-area { align-items: center; }
             .logo-sub { margin-left: 0; }
@@ -568,20 +651,21 @@
 
         @media (max-width: 768px) {
             .cards-row { grid-template-columns: 1fr; }
+            .price-card.card-business { transform: scale(1); }
+            .price-card.card-business:hover { transform: translateY(-8px); }
             .footer-banner { flex-direction: column; text-align: center; padding: 3rem 5%; }
             .cta-left { flex-direction: column; }
             .btn-cta { margin-left: 0; width: 100%; justify-content: center;}
             .hero-text h1 { font-size: 2.5rem; }
             body { background-attachment: scroll; } 
             .contact-info { flex-direction: column; gap: 0.5rem; }
+            .process-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- =========================================
-         NAVBAR WITH YOUR INFO
-         ========================================= -->
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo-area">
             <div class="logo-title">
@@ -590,7 +674,6 @@
             <div class="logo-sub">TURN YOUR IDEAS INTO WEBSITES</div>
         </div>
         
-        <!-- CONTACT INFO SA TAAS -->
         <div class="contact-info">
             <a href="mailto:natividadkenneth001@gmail.com" class="contact-link" title="Email Me">
                 <i class="fas fa-envelope"></i> natividadkenneth001@gmail.com
@@ -605,8 +688,10 @@
     <section class="hero-section">
         <div class="hero-grid">
             <div class="hero-text">
+                <!-- MARKETING HOOK -->
+                <div class="hook-badge">🚀 Real Reasons People Scroll Past Your Page</div>
                 <h1>Quality Code.<br><span>Real Results.</span></h1>
-                <p>Professional and affordable web development packages for individuals, businesses, and growing brands.</p>
+                <p>Your website is your 24/7 salesperson. Let's build one that actually talks to your audience and converts them into paying clients.</p>
                 
                 <div class="hero-checks">
                     <span><i class="fas fa-check-circle"></i> Modern Design</span>
@@ -671,18 +756,19 @@
     <section class="package-details" id="details">
         <div class="package-container">
             <div class="section-title">
-                <h2>Package Details</h2>
+                <h2>Introducing the Hi Pages Page Builder Package</h2>
                 <p>Choose the right package for your needs.</p>
             </div>
 
             <div class="package-layout">
                 <div class="cards-row">
                     
+                    <!-- STARTER (2999) -->
                     <div class="price-card card-starter">
                         <div class="icon-circle icon-starter"><i class="fas fa-code"></i></div>
                         <h3>Starter</h3>
                         <div class="card-desc">Simple. Clean. Effective.</div>
-                        <div class="price-amount">₱3,000 <span>/one-time</span></div>
+                        <div class="price-amount">₱2,999 <span>/one-time</span></div>
                         
                         <ul class="feat-list">
                             <li><i class="fas fa-check"></i> 1 Page Website</li>
@@ -691,15 +777,18 @@
                             <li><i class="fas fa-check"></i> Contact Form</li>
                             <li><i class="fas fa-check"></i> 1 Week Support</li>
                         </ul>
+                        <div class="retainer-note"><i class="fas fa-info-circle"></i> Optional: ₱500/mo retainer for updates</div>
                         
                         <a href="https://wa.me/639464878425?text=Hi%20Kenneth!%20I'm%20interested%20in%20the%20Starter%20Package." target="_blank" class="btn-card btn-card-starter">Get Started <i class="fas fa-arrow-right" style="margin-left:5px; font-size:0.7rem;"></i></a>
                     </div>
 
+                    <!-- BUSINESS (4999) -->
                     <div class="price-card card-business">
+                        <div class="popular-badge">MOST POPULAR</div>
                         <div class="icon-circle icon-business"><i class="fas fa-code"></i></div>
                         <h3>Business</h3>
                         <div class="card-desc">Grow Your Online Presence.</div>
-                        <div class="price-amount">₱5,000 <span>/one-time</span></div>
+                        <div class="price-amount">₱4,999 <span>/one-time</span></div>
                         
                         <ul class="feat-list">
                             <li><i class="fas fa-check"></i> Up to 5 Pages</li>
@@ -709,15 +798,17 @@
                             <li><i class="fas fa-check"></i> Content Upload Assistance</li>
                             <li><i class="fas fa-check"></i> 2 Weeks Support</li>
                         </ul>
+                        <div class="retainer-note"><i class="fas fa-info-circle"></i> Optional: ₱1,000/mo retainer for updates</div>
                         
                         <a href="https://wa.me/639464878425?text=Hi%20Kenneth!%20I'm%20interested%20in%20the%20Business%20Package." target="_blank" class="btn-card btn-card-blue">Get Started <i class="fas fa-arrow-right" style="margin-left:5px; font-size:0.7rem;"></i></a>
                     </div>
 
+                    <!-- PREMIUM (7999) -->
                     <div class="price-card card-premium">
                         <div class="icon-circle icon-premium"><i class="fas fa-code"></i></div>
                         <h3>Premium</h3>
                         <div class="card-desc">Built for Bigger Goals.</div>
-                        <div class="price-amount">₱8,000 <span>/one-time</span></div>
+                        <div class="price-amount">₱7,999 <span>/one-time</span></div>
                         
                         <ul class="feat-list">
                             <li><i class="fas fa-check"></i> Custom Features & Functionality</li>
@@ -727,6 +818,7 @@
                             <li><i class="fas fa-check"></i> Performance & Security Setup</li>
                             <li><i class="fas fa-check"></i> 1 Month Support</li>
                         </ul>
+                        <div class="retainer-note"><i class="fas fa-info-circle"></i> Optional: ₱2,000/mo retainer for updates</div>
                         
                         <a href="https://wa.me/639464878425?text=Hi%20Kenneth!%20I'm%20interested%20in%20the%20Premium%20Package." target="_blank" class="btn-card btn-card-purple">Get Started <i class="fas fa-arrow-right" style="margin-left:5px; font-size:0.7rem;"></i></a>
                     </div>
@@ -771,9 +863,42 @@
                         <i class="fas fa-heart"></i>
                         <div class="benefit-text">
                             <h4>Long-Term Support</h4>
-                            <p>I'm here even after launch.</p>
+                            <p>I'm here even after launch (Optional retainers available).</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: OUR PROCESS -->
+    <section class="process-section">
+        <div class="process-container">
+            <div class="section-title">
+                <h2>How It <span class="gradient-text">Works</span></h2>
+                <p>Simple. Transparent. No headaches.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Message Me</h4>
+                    <p>Click any "Get Started" button to message me on WhatsApp or Email.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Free Consultation</h4>
+                    <p>We'll discuss your goals, choose the right package, and I'll answer your questions.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Design & Build</h4>
+                    <p>I'll start coding your website. You'll get updates and can request revisions.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Launch</h4>
+                    <p>Once approved, we launch your site and I hand over the keys!</p>
                 </div>
             </div>
         </div>
@@ -788,7 +913,8 @@
                 <p>Whether it's a personal portfolio, business site, or something unique — I'm ready to help you bring it to life.</p>
             </div>
         </div>
-        <a href="mailto:natividadkenneth001@gmail.com" class="btn-cta">Contact Me <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i></a>
+        <!-- CLICKABLE BUTTON -->
+        <a href="mailto:natividadkenneth001@gmail.com" class="btn-cta">Contact Me <i class="fas fa-arrow-right" style="font-size:0.9rem;"></i></a>
     </div>
 
 </body>
